@@ -19,53 +19,52 @@ public class LinkedList1 {
 
     //Method to insert new node
 
-    public static LinkedList1 insert(LinkedList1 list, int data) {
+    public void insert(int data) {
 
         //Create a new node with given data
         Node new_node = new Node(data);
         new_node.next = null;
 
-        if(list.head == null) {
-            list.head = new_node;
+        if(head == null) {
+            head = new_node;
+            return;
         }
-        else {
-            Node last = list.head;
+
+            Node last = head;
             while(last.next != null) {
                 last = last.next;
             }
 
             last.next = new_node;
-        }
 
-        return list;
+
+        return;
     }
 
-    public static void printList(LinkedList1 list)
+    public void printList()
     {
-        Node currNode = list.head;
+        Node currNode = head;
 
         System.out.print("LinkedList: ");
 
         while(currNode != null) {
-            System.out.print(currNode.data + " ");
+            System.out.print(currNode.data + "->");
 
             currNode = currNode.next;
         }
+        System.out.print("null");
     }
 
     public static void main(String[] args) {
         LinkedList1 list = new LinkedList1();
 
-        list = insert(list, 1);
-        list = insert(list, 2);
-        list = insert(list, 3);
-        list = insert(list, 4);
-        list = insert(list, 5);
-        list = insert(list, 6);
-        list = insert(list, 7);
-        list = insert(list, 8);
+        list.insert(1);
+        list.insert(2);
+        list.insert(3);
+        list.insert(4);
+        list.insert(5);
 
-        printList(list);
+        list.printList();
     }
 
 
