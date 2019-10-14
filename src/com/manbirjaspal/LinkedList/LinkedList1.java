@@ -55,6 +55,8 @@ public class LinkedList1 {
         System.out.print("null");
     }
 
+
+
     public static void main(String[] args) {
         LinkedList1 list = new LinkedList1();
 
