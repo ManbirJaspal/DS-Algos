@@ -12,9 +12,9 @@ public class SubList {
         al.add("D");
         al.add("E");
 
-        System.out.println(al);
+        System.out.println(al.get(0));
 
-        List<String> al1 = al.subList(2, 4);
+        List<String> al1 = al.subList(0, 4);
 
         System.out.println(al1);
 
